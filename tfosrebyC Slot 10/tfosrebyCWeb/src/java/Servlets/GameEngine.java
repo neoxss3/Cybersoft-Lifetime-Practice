@@ -8,6 +8,7 @@ package Servlets;
 import User.UserStatics;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -39,11 +40,9 @@ public class GameEngine extends HttpServlet {
         if (computernum == userguess) {
             numguess = 0;
             request.setAttribute("BINGO", "Congratulations ! The number is: " + computernum);
-            UserStatics access = new UserStatics();
-
             List<UserStatics> addmore = (List<UserStatics>) session.getAttribute("USER_LIST");
             if (addmore == null) {
-                addmore = access.getlistuser();
+                addmore = new ArrayList<>();
             }
             addmore.add(new UserStatics(user, numguess));
 

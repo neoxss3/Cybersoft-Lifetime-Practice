@@ -16,14 +16,6 @@ public class UserStatics implements Comparable {
 
     String name;
     int guess;
-    List<UserStatics> list;
-
-    public List<UserStatics> getlistuser() {
-        if (list == null) {
-            list = new ArrayList<>();
-        }
-        return list;
-    }
 
     public UserStatics() {
     }

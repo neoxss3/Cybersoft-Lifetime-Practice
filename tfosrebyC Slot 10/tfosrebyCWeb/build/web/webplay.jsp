@@ -13,6 +13,10 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <h1>INSTRUCTIONS</h1>
+        <h5>- A number from 1 to 1000 has been randomly appeared, try to find it out !</h5>
+        <h5>- If your number is less/higher than the given number you will get a message for mor informations</h5>
+        <h5>Hint: Binary Search would be a great solution !</h5>
         <form action="GameEngine" method="POST">
             <h1>You Guess:</h1>
             <input type="number" name="userguess" value="" required=""/>
